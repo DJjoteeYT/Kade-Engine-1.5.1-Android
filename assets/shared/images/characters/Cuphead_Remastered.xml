@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="Cuphead Remastered.png">
+<TextureAtlas imagePath="Cuphead_Remastered.png">
 <SubTexture name="Cuphead Intro phase 2 instance 10000" x="717" y="281" width="229" height="267" frameX="-53" frameY="-4" frameWidth="369" frameHeight="272" />
 <SubTexture name="Cuphead Intro phase 2 instance 10001" x="0" y="981" width="346" height="264" frameX="-8" frameY="-7" frameWidth="369" frameHeight="272" />
 <SubTexture name="Cuphead Intro phase 2 instance 10002" x="1685" y="771" width="249" height="255" frameX="-99" frameY="-16" frameWidth="369" frameHeight="272" />
