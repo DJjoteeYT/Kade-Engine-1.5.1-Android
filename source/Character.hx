@@ -139,6 +139,37 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+
+                        case 'cuphead':
+				tex = Paths.getSparrowAtlas('characters/Cuphead_Remastered', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Cuphead_standing instance 1', 24, true);
+				animation.addByPrefix('singUP', 'Up instance 1', 24);
+				animation.addByPrefix('singRIGHT', 'Right instance 1', 24);
+				animation.addByPrefix('singDOWN', 'Down instance 1', 24);
+				animation.addByPrefix('singLEFT', 'Left instance 1', 24);
+
+                                animation.addByPrefix('intro', 'Cuphead Intro phase 2 instance 1', false);
+				animation.addByPrefix('attack1', 'Shoot instance 1', 24, true);
+				animation.addByPrefix('dodge', 'Dodge instance 1', 24, false);
+				animation.addByPrefix('hit', 'Hurt instance 1', 24, false);
+
+				notSoSpecialAnimList.push('attack1');
+
+          
+				addOffset('idle', 0, 0);
+				addOffset('singUP', -12, 51);
+				addOffset('singRIGHT', -20, -10);
+				addOffset('singLEFT', 40, -8);
+				addOffset('singDOWN', -24, -16);
+				addOffset('intro', 49, 2);
+				addOffset('attack1', 2, -3);
+				addOffset('dodge', 32, -9);
+				addOffset('hit', 120, 63);
+
+                                setZoom(1.74);
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
@@ -267,42 +298,37 @@ class Character extends FlxSprite
 				flipX = true;
 
 			case 'bf':
-				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
+				var tex = Paths.getSparrowAtlas('characters/BoyFriend_Cuphead', 'shared');
 				frames = tex;
 
 				trace(tex.frames.length);
 
-				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
+				animation.addByPrefix('attack', '0BF attack instance 1', 24, false);
+                                animation.addByPrefix('hurt', 'BF hit instance 1', 24, false);
+                                animation.addByPrefix('dodge', 'boyfriend dodge instance 1', 24, false);
 
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 
-				animation.addByPrefix('scared', 'BF idle shaking', 24);
-
-				addOffset('idle', -5);
-				addOffset("singUP", -29, 27);
-				addOffset("singRIGHT", -38, -7);
-				addOffset("singLEFT", 12, -6);
-				addOffset("singDOWN", -10, -50);
-				addOffset("singUPmiss", -29, 27);
-				addOffset("singRIGHTmiss", -30, 21);
-				addOffset("singLEFTmiss", 12, 24);
-				addOffset("singDOWNmiss", -11, -19);
-				addOffset("hey", 7, 4);
-				addOffset('firstDeath', 37, 11);
-				addOffset('deathLoop', 37, 5);
-				addOffset('deathConfirm', 37, 69);
-				addOffset('scared', -4);
+				addOffset('idle', -4, 2);
+				addOffset("singUP", -51, 55);
+				addOffset("singRIGHT", -38, -1);
+				addOffset("singLEFT", 24, 3);
+				addOffset("singDOWN", -32, -35);
+				addOffset("singUPmiss", -60, 17);
+				addOffset("singRIGHTmiss", -60, 24);
+				addOffset("singLEFTmiss", -27, 19);
+				addOffset("singDOWNmiss", -37, -17);
+				addOffset("attack", 1083, -7);
+				addOffset('hurt', 42, 53);
+				addOffset('dodge', -20, -7);
 
 				playAnim('idle');
 
