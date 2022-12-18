@@ -674,6 +674,45 @@ class PlayState extends MusicBeatState
 								add(waveSpriteFG);
 						*/
 			}
+                        case 'field':
+				{
+						defaultCamZoom = 0.61;
+						curStage = 'field';
+                                        	var bg:FlxSprite = new FlxSprite();
+
+					bg.loadGraphic(Paths.image('BG-00', 'cup',false));
+
+					bg.setGraphicSize(Std.int(bg.width * 0.7 * 4));
+					bg.updateHitbox();
+					bg.screenCenter();
+					bg.antialiasing = FlxG.save.data.highquality;
+					bg.scrollFactor.set(0.2, 0.2);
+					bg.active = false;
+					add(bg);
+	
+			
+                                        var trees:FlxSprite = new FlxSprite();
+	
+					trees.setGraphicSize(Std.int(trees.width * 0.7 * 4));
+					trees.updateHitbox();
+					trees.screenCenter();
+					trees.x -= 75;
+					trees.antialiasing = FlxG.save.data.highquality;
+					trees.scrollFactor.set(0.45, 0.45);
+					trees.active = false;
+					add(trees);
+	
+				        var fg:FlxSprite = new FlxSprite();
+
+					fg.setGraphicSize(Std.int(fg.width * 0.9 * 4));
+					fg.updateHitbox();
+					fg.screenCenter();
+					fg.x -= 100;
+					fg.y -= 200;
+					fg.antialiasing = FlxG.save.data.highquality;
+					fg.active = false;
+					add(fg);
+				}
 			case 'stage':
 				{
 						defaultCamZoom = 0.9;
